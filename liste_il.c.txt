@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include "liste.h"
+int ajout_li(char *li_el , l_el x )
+{
+	FILE * f=fopen(li_el, "a");
+	if (f!=NULL)
+	{
+
+		fprintf(f,"%d %s %s %s %s %s %s
+%s", x.date,x.ori,x.nomliste,x.IDliste,x.nbcand,x.IDC1,x.IDC2,x.IDC3,x.CINTlist);
+		fclose(f);
+		return 1;
+	}
+	else 
+		return 0;
+}
+int modifier_li(char *li_el ,l_el nouv, int IDliste)
+{
+	int tr=0;
+	l_el x;
+	FILE * f=fopen(li, "r");
+	FILE * f2=fopen("nouv.txt", "w");
+	if(f!=NULL && f2!=NULL)
+	{
+		while(fscanf(f,"%d %s %d %d %d %d",x.id_lelc,x.ori,x.ide,x.id1,x.id2,x.id3)!=EOF)
+		{
+			if(x.id_lel== id)
+			{
+				fprintf(f2,"%d %s %d %d %d %d",nouv.id_lel,nouv.ori,nouv.ide,nouv.id1,nouv.id2,nouv.id3);
+				tr=1
+			}
+			else 
+				fprintf(f2,"%d %s %d %d %d %d",x.id_lelc,x.ori,x.ide,x.id1,x.id2,x.id3);
+		}
+	}
+	fclose(f);
+	fclose(f2);
+	remove(l_li);
+	rename("nouv.txt", l_li);
+	return(tr);
+}
+int supprimer_li(char *l_li, int *id_lelc)
+{
+	int tr=0;
+	l_el.x;
+	FILE * f=fopen(l_li, "r");
+	FILE * f2=fopen("nouv.txt", "w");
+	(if(f!=NULL && f2!=NULL)
+	{
+		while(fscanf(f,"%d %s %d %d %d %d",x.id_lelc,x.ori,x.ide,x.id1,x.id2,x.id3)!=EOF)
+		{

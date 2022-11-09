@@ -1,0 +1,79 @@
+typedef struct{ 
+int jour;
+int mois;
+int annee;
+}Date,
+typedef struct{
+char nomliste[20];
+char IDliste[20];
+Date d;
+char IDC1[20];
+char IDC2[20];
+char IDC3[20];
+char CINTliste[20]
+int nbCand;
+char ori;
+}li_el;
+
+
+
+int ajout_li(char *li_el , l_el .x )
+int modifier_li(char *li_el,l_el nouv, int IDliste)
+int supprimer_li(char *li_el, int *IDliste)
+li_el chercher_li(char *li_el,int IDliste );
+.c
+#include<stdio.h>
+#include "liste.h"
+int ajout_li(char *li_el , l_el x )
+{
+	FILE * f=fopen(li_el, "a");
+	if (f!=NULL)
+	{
+
+		fprintf(f,"%d %s %s %d %d %d %d %d %d", x.date,x.ori,x.nomliste,x.IDliste,x.nbcand,x.IDC1,x.IDC2,x.IDC3,x.CINTlist);
+
+		fclose(f);
+		return 1;
+	}
+	else
+		return 0;
+}
+int modifier_li(char *li_el ,l_el nouv, int IDliste)
+{
+	int tr=0;
+	l_el x;
+	FILE * f=fopen(li_el, "r");
+	FILE * f2=fopen("nouv.txt", "w");
+	if(f!=NULL && f2!=NULL)
+	{
+		while(fscanf(f,"%d %s %s %d %d %d %d %d %d", x.date,x.ori,x.nomliste,x.IDliste,x.nbcand,x.IDC1,x.IDC2,x.IDC3,x.CINTlist);!=EOF)
+
+		{
+			if(x.IDliste== id)
+			{
+				fprintf(f2,"%d %s %d %d %d %d",nouv.IDliste,nouv.ori,nouv.IDliste,nouv.IDC1,nouv.IDC2,nouv.IDC3,nouv.CINTlist);
+				tr=1
+			}
+			else
+				fprintf(f2,"%d %s %d %d %d %d",x.id_lelc,x.ori,x.ide,x.id1,x.id2,x.id3);
+		}
+	}
+	fclose(f);
+	fclose(f2);
+	remove(l_li);
+	rename("nouv.txt", l_li);
+	return(tr);
+}
+int supprimer_li(char *l_li, int *id_lelc)
+{
+	int tr=0;
+	l_el.x;
+	FILE * f=fopen(l_li, "r");
+	FILE * f2=fopen("nouv.txt", "w");
+	(if(f!=NULL && f2!=NULL)
+	{
+		while(fscanf(f,"%d %s %d %d %d %d",x.id_lelc,x.ori,x.ide,x.id1,x.id2,x.id3)!=EOF)
+		{
+
+
+#endif
